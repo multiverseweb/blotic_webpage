@@ -1,21 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins";
     color: #fff;
-    
+
+}
+::-webkit-scrollbar{
+    width: 0;
 }
 
-body{
-    background: linear-gradient(35deg,#060009,58%,#020f65);
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(35deg, #060009, 58%, #020f65);
     height: 100vh;
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,24 +36,24 @@ body{
     padding: 32px 10%;
 }
 
-.header img{
+.header img {
     height: 190px;
     scale: .9;
     filter: saturate(3);
     transition: .5s ease;
 }
 
-.header img:hover{
+.header img:hover {
     filter: saturate(3);
     scale: 1;
 }
 
-.navbar{
+.navbar {
     background-color: transparent;
     transition: top 0.3s;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     color: #fff;
     margin-left: 55px;
@@ -51,11 +61,9 @@ body{
     cursor: pointer;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: aqua;
 }
-
-
 
 section{
     padding: 10rem 9% 2rem;
@@ -137,22 +145,19 @@ section{
     align-items:center;
     margin: 10px 0;
 }
-
 /*footer*/
-footer{
-    position: absolute;
+footer {
+    position:fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(35deg,#060009,72%,#020f65);
-    height: auto;
+    background: none;
     width: 100vw;
-
     padding-top: 40px;
     color: #fff;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,17 +165,19 @@ footer{
     text-align: center;
 }
 
-.socials{
+.socials {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
+    margin: 1rem 0 -3rem 0;
 }
-.socials li{
+
+.socials li {
     margin: 0 10px;
 }
-.socials a{
+
+.socials a {
     text-decoration: none;
     color: #fff;
     /*border: 1.1px solid white;*/
@@ -179,7 +186,8 @@ footer{
     /*border-radius: 50%;*/
 
 }
-.socials a i{
+
+.socials a i {
     font-size: 1.2rem;
     width: 20px;
 
@@ -187,56 +195,88 @@ footer{
     transition: color .4s ease;
 
 }
-.socials a:hover i{
+
+.socials a:hover i {
     color: aqua;
 }
 
-.footer-bottom{
-    background: linear-gradient(35deg,#060009,80%,#020f65);
+.footer-bottom {
+    background: none;
     width: 100vw;
     padding: 20px;
     padding-bottom: 40px;
     text-align: center;
 }
-.footer-bottom p{
-float: left;
+
+.footer-bottom p {
+    float: left;
     font-size: 12px;
     word-spacing: 2px;
     text-transform: capitalize;
 }
-.footer-bottom p a{
-  color:#44bae8;
-  font-size: 16px;
-  text-decoration: none;
+
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
 }
-.footer-bottom span{
+
+.footer-bottom span {
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
 }
-.footer-menu{
-  float: right;
+
+.footer-menu {
+    float: right;
 
 }
-.footer-menu ul{
-  display: flex;
-}
-.footer-menu ul li{
-padding-right: 10px;
-display: block;
-}
-.footer-menu ul li a{
-  color: #cfd2d6;
-  text-decoration: none;
-}
-.footer-menu ul li a:hover{
-  color: #27bcda;
+
+.footer-menu ul {
+    display: flex;
 }
 
-@media (max-width:500px) {
-.footer-menu ul{
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.footer-menu ul li {
+    padding-right: 10px;
+    display: block;
 }
+
+.footer-menu ul li a {
+    color: #cfd2d6;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: #27bcda;
+}
+@media (max-width:900px) {
+    .footer-content {
+        align-items:self-start;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+    .text-content{
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width:520px) {
+    .footer-content {
+        align-items:center;
+    }
+    .footer-bottom{
+        text-align: center;
+    }
+    .footer-bottom p {
+        float:none;
+    }
+    .footer-menu {
+        float: none;
+    }
+    .footer-menu ul{
+        justify-content: center;
+    }
+    footer{
+        background: linear-gradient(to bottom, #00000000, #000000);
+    }
 }
