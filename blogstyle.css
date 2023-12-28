@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    color: #fff;
+
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(35deg, #060009, 58%, #020f65);
+    height: 100vh;
+    padding: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 10%;
+}
+
+.header img {
+    height: 190px;
+    scale: .9;
+    filter: saturate(3);
+    transition: .5s ease;
+}
+
+.header img:hover {
+    filter: saturate(3);
+    scale: 1;
+}
+
+.navbar {
+    background-color: transparent;
+    transition: top 0.3s;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 55px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    color: aqua;
+}
+
+.title {
+    margin-top: 12vh;
+    font-size: 2.5rem;
+    z-index: -1;
+    height: 2.5rem;
+}
+
+.element {
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: 5px;
+    position: absolute;
+    z-index: -10;
+    font-size: 1.4rem;
+    padding: 20px;
+    transition-duration: 0.4s;
+}
+
+.info {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.7rem;
+    z-index: -1;
+}
+
+.heading {
+    z-index: 10;
+}
+
+#top {
+    left: 15vw;
+    width: 70vw;
+    height: 16vh;
+    top: 24vh;
+    background-image: url(https://online.stanford.edu/sites/default/files/inline-images/1600X900-How-does-blockchain-work.jpg);
+}
+
+#side {
+    width: 18vw;
+    height: 50vh;
+    top: 42vh;
+    left: 15vw;
+    background-image: url(https://t3.ftcdn.net/jpg/03/43/04/86/360_F_343048617_UOxqdlxrHPfsHqv18yk6ntyl7Enecsgw.jpg);
+}
+
+#left {
+    width: 25vw;
+    height: 24vh;
+    top: 42vh;
+    left: 34vw;
+    background-image: url(https://cdn.britannica.com/36/241736-159-D40F2AEC/Abstract-cryptocurrency-with-gold-bitcoin-background.jpg);
+}
+
+.image {
+    position: absolute;
+    z-index: -1;
+    height: 25vh;
+    left: 61vw;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    0% {
+        top: 41vh;
+    }
+
+    50% {
+        top: 42vh;
+    }
+
+    100% {
+        top: 41vh;
+    }
+}
+
+#middle {
+    width: 51vw;
+    height: 24vh;
+    top: 68vh;
+    left: 34vw;
+    background-image: url(//eattheblocks.com/wp-content/uploads/2022/03/shutterstock_2021164787.jpg);
+}
+
+#bottom {
+    width: 70vw;
+    height: 20vh;
+    top: 94vh;
+    left: 15vw;
+    background-image: url(https://img.freepik.com/free-vector/gradient-metaverse-background_23-2149257046.jpg?w=900&t=st=1671435539~exp=1671436139~hmac=652d46278fcf54dcba635977a3dea029279ac59a5dfea02e7cbe9e81ae5b971d);
+}
+
+#gap {
+    background-color: #ffffff00;
+    width: 70vw;
+    height: 10vh;
+    top: 120vh;
+    left: 15vw;
+}
+
+.blind {
+    z-index: -10;
+    position: absolute;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.795), #00000000, #00000000, #00000000, rgba(0, 0, 0, 0.8));
+}
+
+.blind:hover {
+    filter: invert(0.3);
+}
+
+#b-top {
+    left: 15vw;
+    width: 70vw;
+    height: 16vh;
+    top: 24vh;
+}
+
+#b-side {
+    width: 18vw;
+    height: 50vh;
+    top: 42vh;
+    left: 15vw;
+}
+
+#b-left {
+    width: 25vw;
+    height: 24vh;
+    top: 42vh;
+    left: 34vw;
+}
+
+#b-middle {
+    width: 51vw;
+    height: 24vh;
+    top: 68vh;
+    left: 34vw;
+}
+
+#b-bottom {
+    width: 70vw;
+    height: 20vh;
+    top: 94vh;
+    left: 15vw;
+}
+
+/*footer*/
+footer {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 -3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    /*border: 1.1px solid white;*/
+    padding: 5px;
+
+    /*border-radius: 50%;*/
+
+}
+
+.socials a i {
+    font-size: 1.2rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: none;
+    width: 100vw;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    float: left;
+    font-size: 12px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu {
+    float: right;
+
+}
+
+.footer-menu ul {
+    display: flex;
+}
+
+.footer-menu ul li {
+    padding-right: 10px;
+    display: block;
+}
+
+.footer-menu ul li a {
+    color: #cfd2d6;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: #27bcda;
+}
+
+@media (max-width:900px) {
+
+    #top {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    #side {
+        width: 42.5vw;
+        height: 60vh;
+        left: 5vw;
+    }
+
+    #left {
+        width: 46vw;
+        height: 29vh;
+        left: 49vw;
+    }
+
+    .image {
+        height: 25vh;
+        width: auto;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    @keyframes move {
+        0% {
+            top: 103vh;
+        }
+
+        50% {
+            top: 104vh;
+        }
+
+        100% {
+            top: 103vh;
+        }
+    }
+
+    #middle {
+        width: 46vw;
+        height: 29vh;
+        top: 73vh;
+        left: 49vw;
+    }
+
+    #bottom {
+        width: 90vw;
+        top: 130vh;
+        left: 5vw;
+    }
+
+    #gap {
+        height: 20vh;
+        top: 150vh;
+        left: 15vw;
+    }
+
+    .blind {
+        display: none;
+    }
+    .footer-content {
+        align-items:self-start;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width:520px) {
+    .footer-content {
+        align-items:center;
+    }
+    .footer-bottom{
+        text-align: center;
+    }
+    .footer-bottom p {
+        float:none;
+    }
+    .footer-menu {
+        float: none;
+    }
+    .footer-menu ul{
+        justify-content: center;
+    }
+    footer{
+        background: linear-gradient(to bottom, #00000000, #000000);
+    }
+}
