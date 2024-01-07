@@ -16,8 +16,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: linear-gradient(35deg, #060009, 58%, #020f65);
-    height: 100vh;
-    padding: 200px;
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -74,13 +72,17 @@ body {
 
 .element {
     background-attachment: fixed;
-    background-size: cover;
+    background-position: 50% 50%;
+    background-size:contain;
     border-radius: 5px;
     position: absolute;
     z-index: -10;
     font-size: 1.4rem;
     padding: 20px;
     transition-duration: 0.4s;
+}
+.element:hover{
+    background-position: 30%;
 }
 
 .info {
@@ -167,54 +169,6 @@ body {
     top: 120vh;
     left: 15vw;
 }
-
-.blind {
-    z-index: -10;
-    position: absolute;
-    transition-duration: 0.4s;
-    border-radius: 5px;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.795), #00000000, #00000000, #00000000, rgba(0, 0, 0, 0.8));
-}
-
-.blind:hover {
-    filter: invert(0.3);
-}
-
-#b-top {
-    left: 15vw;
-    width: 70vw;
-    height: 16vh;
-    top: 24vh;
-}
-
-#b-side {
-    width: 18vw;
-    height: 50vh;
-    top: 42vh;
-    left: 15vw;
-}
-
-#b-left {
-    width: 25vw;
-    height: 24vh;
-    top: 42vh;
-    left: 34vw;
-}
-
-#b-middle {
-    width: 51vw;
-    height: 24vh;
-    top: 68vh;
-    left: 34vw;
-}
-
-#b-bottom {
-    width: 70vw;
-    height: 20vh;
-    top: 94vh;
-    left: 15vw;
-}
-
 /*footer*/
 footer {
     position:fixed;
@@ -319,6 +273,22 @@ footer {
 .footer-menu ul li a:hover {
     color: #27bcda;
 }
+.read{
+    border: 1px solid white;
+    background-color: #00000000;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 20px;
+    transition-duration: 0.4s;
+}
+.read:hover{
+    background-color: #fff;
+    color: black;
+}
+
 
 @media (max-width:900px) {
 
@@ -379,9 +349,6 @@ footer {
         left: 15vw;
     }
 
-    .blind {
-        display: none;
-    }
     .footer-content {
         align-items:self-start;
         margin-bottom: 30px;
@@ -390,6 +357,16 @@ footer {
 }
 
 @media (max-width:520px) {
+    .read{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        left:10px;
+    }
+    .up{
+        bottom: 50px;
+    }
     .footer-content {
         align-items:center;
     }
