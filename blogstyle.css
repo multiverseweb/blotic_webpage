@@ -29,6 +29,8 @@ body {
     left: 0;
     width: 100%;
     display: flex;
+    background-color: #00000062;
+    backdrop-filter: blur(7px);
     justify-content: space-between;
     align-items: center;
     padding: 32px 10%;
@@ -62,12 +64,31 @@ body {
 .navbar a:hover {
     color: aqua;
 }
-
-.title {
+.top-heading{
     margin-top: 12vh;
     font-size: 2.5rem;
     z-index: -1;
+}
+.title {
     height: 2.5rem;
+    position: absolute;
+    left: 16vw;
+}
+.write{
+    cursor: pointer;
+    margin-top: 10px;
+    position: absolute;
+    color:#000000;
+    right:16vw;
+    background-color: #fff;
+    border: 1px solid white;
+    transition-duration: 0.4s;
+    padding: 10px 20px 10px 20px;
+}
+.write:hover{
+    background-color: #00000000;
+    color: #fff;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.453);
 }
 
 .element {
@@ -80,6 +101,7 @@ body {
     font-size: 1.4rem;
     padding: 20px;
     transition-duration: 0.4s;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0,0.7);
 }
 .element:hover{
     background-position: 30%;
@@ -163,6 +185,7 @@ body {
 }
 
 #gap {
+    box-shadow: none;
     background-color: #ffffff00;
     width: 70vw;
     height: 10vh;
@@ -283,6 +306,7 @@ footer {
     position: absolute;
     bottom: 20px;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 .read:hover{
     background-color: #fff;
@@ -354,9 +378,22 @@ footer {
         margin-bottom: 30px;
         margin-left: 10px;
     }
+    .write{
+        right: 6vw;
+    }
+    .title{
+        left:6vw;
+    }
 }
 
 @media (max-width:520px) {
+    .write{
+        font-size: 15px;
+        padding: 2px 4px 2px 4px;
+    }
+    .title{
+        font-size: 30px;
+    }
     .read{
         padding-left: 10px;
         padding-right: 10px;
@@ -372,6 +409,10 @@ footer {
     }
     .footer-bottom{
         text-align: center;
+        font-size: 15px;
+    }
+    .footer-bottom p a{
+        font-size: 12px;
     }
     .footer-bottom p {
         float:none;
@@ -384,5 +425,6 @@ footer {
     }
     footer{
         background: linear-gradient(to bottom, #00000000, #000000);
+        margin-bottom: -20px;
     }
 }
